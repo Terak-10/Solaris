@@ -1,0 +1,103 @@
+// Buttons 
+.btn-section {
+    max-width: 1440px;
+    margin: 0 auto 8rem auto;
+    min-height: 7rem;
+    padding: 0 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    &_link:link,
+    &_link:visited {
+        text-decoration: none;
+        color: #b19f87;
+    }
+
+    &_span-1 {
+        @media (max-width: 371px) {
+            margin-top: 1rem;
+            display: block;
+        }
+    }
+
+    &_btn {
+        height: 5rem;
+        width: 30rem;
+        background-color: var(--very-dark-blue);
+        border: none;
+        position: relative;
+        text-transform: uppercase;
+        text-align: center;
+        color: #b19f87;
+        letter-spacing: 1rem;
+        overflow: hidden;
+        transition: .4s all;
+    }
+
+    &_btn:hover {
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    &_btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        transition: all 0.5s;
+    }
+
+    &_btn:hover::before {
+        left: 0;
+    }
+
+    &_btn::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: -100%;
+        width: 100%;
+        height: 4px;
+        background-color: #fff;
+        transition: all 0.5s;
+    }
+
+    &_btn:hover::after {
+        right: 0;
+    }
+
+    &_span::before {
+        content: "";
+        position: absolute;
+        top: -100%;
+        right: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #fff;
+        transition: all 0.5s;
+    }
+
+    &_btn:hover span::before {
+        top: 0;
+    }
+
+    &_span::after {
+        content: "";
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background-color: #fff;
+        transition: all 0.5s;
+    }
+
+   &_btn:hover &_span::after {
+       bottom: 0;
+   }
+}
